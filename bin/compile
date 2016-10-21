@@ -134,7 +134,6 @@ echo "Running dub build" | indent
 if dub; then
     echo
     echo "Build was successful" | indent
-    ./vibed-heroku-example
     status=0
 else
     echo
