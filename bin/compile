@@ -130,8 +130,8 @@ fi
 # run dub build
 cd $BUILD_DIR
 echo
-echo "Running dub build" | indent
-if dub build --build=release; then
+echo "Running dub" | indent
+if dub; then
     echo
     echo "Build was successful" | indent
     status=0
