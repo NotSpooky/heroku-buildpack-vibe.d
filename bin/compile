@@ -77,10 +77,10 @@ fi
 cp -R $CACHE_PREFIX $BUILD_DIR/opt
 
 
-DMD_ARCHIVE_PATH=http://downloads.dlang.org/releases/2014
-DMD_ARCHIVE=dmd.2.065.0
+DMD_ARCHIVE_PATH=http://downloads.dlang.org/releases/2016
+DMD_ARCHIVE=dmd.2.071.2.linux
 DUB_ARCHIVE_PATH=http://code.dlang.org/files
-DUB_ARCHIVE=dub-0.9.21-linux-x86_64
+DUB_ARCHIVE=dub-1.0.0-linux-x86_64
 
 # download and unpack binary releases
 cd $ARCHIVE_DIR
