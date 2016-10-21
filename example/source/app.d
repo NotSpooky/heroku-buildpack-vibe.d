@@ -4,18 +4,11 @@ import std.conv;
 import std.process;
 import vibe.d;
 
-void index(HTTPServerRequest req, HTTPServerResponse res)
-{
-  res.renderCompat!("index.dt");
-}
-
 shared static this()
 {
-  auto router = new URLRouter;
-  router.get("/", &index);
-
-  auto settings = new HTTPServerSettings;
-  settings.port = environment.get("PORT", "8080").to!ushort;
-
-  listenHTTP(settings, router);
+    auto settings = new HTTPServerSettings;
+    settings.port = 8080;
+    settings.bindAddresses = ["::1", "127.0.0.1"];
+    listenHTTP(settings, &hello);
+    logInfo("Please open http://127.0.0.1:8080/ in your browser.");
 }
