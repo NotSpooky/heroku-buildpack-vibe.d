@@ -131,7 +131,7 @@ fi
 cd $BUILD_DIR
 echo
 echo "Running dub build" | indent
-if dub; then
+if dub build; then
     echo
     echo "Build was successful" | indent
     status=0
